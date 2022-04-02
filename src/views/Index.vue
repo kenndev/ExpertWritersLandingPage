@@ -365,7 +365,6 @@ const initPayPalButton = () => {
     .Buttons({
       // Sets up the transaction when a payment button is clicked
       createOrder: function (data, actions) {
-        fbq('track', 'Purchase', {currency: "USD", value: 149.00});
         return actions.order.create({
           purchase_units: [
             {
@@ -381,12 +380,12 @@ const initPayPalButton = () => {
       onApprove: function (data, actions) {
         return actions.order.capture().then(function (orderData) {
           // Successful capture! For dev/demo purposes:
-          
-          console.log(
-            "Capture result",
-            orderData,
-            JSON.stringify(orderData, null, 2)
-          );
+          fbq('track', 'Purchase', {currency: "USD", value: 149.00});
+          // console.log(
+          //   "Capture result",
+          //   orderData,
+          //   JSON.stringify(orderData, null, 2)
+          // );
           var transaction = orderData.purchase_units[0].payments.captures[0];
           // alert(
           //     "Transaction " +
