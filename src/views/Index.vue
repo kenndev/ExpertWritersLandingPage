@@ -74,7 +74,7 @@
             class="mr-auto ml-auto -mt-32 w-10/12 px-12 md:w-6/12 md:px-4 lg:w-4/12"
           >
             <div
-              class="relative mb-6 flex w-full min-w-0 flex-col break-words rounded-lg bg-white bg-emerald-500 shadow-lg"
+              class="relative mb-6 flex w-full min-w-0 flex-col break-words rounded-lg  bg-emerald-500 shadow-lg"
             >
               <img
                 alt="..."
@@ -365,11 +365,12 @@ const initPayPalButton = () => {
     .Buttons({
       // Sets up the transaction when a payment button is clicked
       createOrder: function (data, actions) {
+        fbq('track', 'Purchase', {currency: "USD", value: 149.00});
         return actions.order.create({
           purchase_units: [
             {
               amount: {
-                value: "150", // Can reference variables or functions. Example: `value: document.getElementById('...').value`
+                value: "149", // Can reference variables or functions. Example: `value: document.getElementById('...').value`
               },
             },
           ],
@@ -380,6 +381,7 @@ const initPayPalButton = () => {
       onApprove: function (data, actions) {
         return actions.order.capture().then(function (orderData) {
           // Successful capture! For dev/demo purposes:
+          
           console.log(
             "Capture result",
             orderData,
