@@ -138,7 +138,7 @@
                     <p class="mb-4 text-blueGray-500">
                       Expert Writers is designed in such a way that the process
                       of placing an order is easy and fast. Just one step
-                      involved and it's done.
+                      and it's done.
                     </p>
                   </div>
                 </div>
@@ -169,7 +169,7 @@
                     <h6 class="mb-1 text-xl font-semibold">Documentation</h6>
                     <p class="mb-4 text-blueGray-500">
                       Built by developers for developers. You will love how easy
-                      is to to work with Expert Writers.
+                      is to work with Expert Writers.
                     </p>
                   </div>
                 </div>
