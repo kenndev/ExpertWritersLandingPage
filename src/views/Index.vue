@@ -348,7 +348,7 @@
 import IndexNavbar from "@/components/Navbars/IndexNavbar.vue";
 import FooterComponent from "@/components/Footers/Footer.vue";
 
-import patternVue from "@/assets/img/dashboard.jpg";
+import patternVue from "@/assets/img/dashboard2.png";
 import componentBtn from "@/assets/img/component-btn.png";
 import componentProfileCard from "@/assets/img/component-profile-card.png";
 import componentInfoCard from "@/assets/img/component-info-card.png";
